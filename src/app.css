@@ -1,0 +1,35 @@
+@import 'nativescript-theme-core/css/core.light.css';
+
+.h2 {
+    margin-top: 15;
+    margin-left: 5;
+}
+
+.hero-flexgrid-item {
+    width: 32%;
+    margin: 5;
+    padding: 10;
+    background-color: #EEEEEE;
+}
+
+.hero-grid-item {
+    margin: 5;
+    padding: 10;
+    background-color: #EEEEEE;
+}
+
+.text-input {
+    border-color: #CCCCCC;
+    border-width: 1;
+    padding: 5;
+    margin-right: 5;
+}
+
+.btn {
+    margin: 0;
+}
+
+.btn-danger {
+    background-color: red;
+    color: #FFFFFF;
+}

@@ -1,0 +1,13 @@
+<StackLayout>
+    <Label text="{{ hero.name }} Details..." class="h2"></Label>
+    <GridLayout rows="auto, auto" columns="100, *" margin="5">
+        <Label text="ID:" row="0" col="0"></Label>
+        <Label text="{{ hero.id }}" row="0" col="1"></Label>
+        <Label text="Name:" row="1" col="0"></Label>
+        <TextView #heroName hint="{{ hero.name }}" row="1" col="1" class="text-input" margin="0"></TextView>
+    </GridLayout>
+    <GridLayout rows="auto" columns="*, *">
+        <Button text="Cancel" (tap)="cancel()" class="btn btn-danger" margin="5" row="0" col="0"></Button>
+        <Button text="Save" (tap)="save(hero.id, heroName.text)" class="btn btn-primary" margin="5" row="0" col="1"></Button>
+    </GridLayout>
+</StackLayout>

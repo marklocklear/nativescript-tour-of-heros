@@ -1,0 +1,5 @@
+<ActionBar title="Tour of Heroes"></ActionBar>
+<StackLayout>
+    <SegmentedBar #sb [items]="navItems" selectedIndex="0" (selectedIndexChange)="navigate(sb.selectedIndex)"></SegmentedBar>
+    <router-outlet></router-outlet>
+</StackLayout>

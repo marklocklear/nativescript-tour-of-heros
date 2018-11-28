@@ -1,0 +1,16 @@
+<StackLayout>
+    <GridLayout rows="auto" columns="*, auto" margin="5" marginTop="15">
+        <TextField #heroName hint="Hero Name" row="0" col="0" class="text-input"></TextField>
+        <Button text="Add" (tap)="add(heroName.text); heroName.text = ''" class="btn btn-primary" row="0" col="1"></Button>
+    </GridLayout>
+    <Label text="My Heroes" class="h2"></Label>
+    <ScrollView>
+        <StackLayout>
+            <GridLayout *ngFor="let hero of heroes" rows="auto" columns="30, *, 10" class="hero-grid-item">
+                <Label text="{{ hero.id }}" row="0" col="0"></Label>
+                <Label text="{{ hero.name }}" row="0" col="1" (tap)="edit(hero.id)"></Label>
+                <Label text="x" row="0" col="2" (tap)="remove(hero.id)"></Label>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</StackLayout>

@@ -1,0 +1,6 @@
+<StackLayout>
+    <Label text="Top Heroes" class="h2"></Label>
+    <FlexboxLayout flexWrap="wrap" flexDirection="row">
+        <Label *ngFor="let hero of heroes" text="{{ hero.name }}" (tap)="edit(hero.id)" flexGrow="1" class="hero-flexgrid-item"></Label>
+    </FlexboxLayout>
+</StackLayout>
